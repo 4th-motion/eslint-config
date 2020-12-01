@@ -23,7 +23,10 @@ const getPackageContent = (packagePath) => {
 
 const PACKAGE_FILENAME = 'package.json'
 const packagePath = path.join(process.cwd(), PACKAGE_FILENAME)
+const packageLocalPath = path.join(__dirname, PACKAGE_FILENAME)
+
 const pkg = JSON.parse(getPackageContent(packagePath))
+const pkgLocal = JSON.parse(getPackageContent(packageLocalPath))
 
 // logging messages
 const messageAdded = (name) => chalk`{bold.magenta [ADDED]  } {bold ${name}} in ${PACKAGE_FILENAME}.`
@@ -46,11 +49,11 @@ const handleOverwrite = (key, name) => {
 }
 
 function getKeyByValue(object, value) {
-  return Object.keys(object).find((key) => object[key] === value)
+  return object ? Object.keys(object).find((key) => object[key] === value) : null
 }
 
 // get task name from bin field in package.json
-const TASK_NAME = getKeyByValue(pkg.bin, './bin/eslint.sh')
+const TASK_NAME = getKeyByValue(pkgLocal.bin, './bin/stylelint.sh') || '4th-eslint'
 
 // add script `lint:js` to package.json
 handleOverwrite(pkg.scripts['lint:js'], 'lint:js')
