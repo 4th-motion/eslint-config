@@ -4,7 +4,7 @@
 ![Version][version-image]
 ![License][license-image]
 
-With this configuration, you can ensure that all developers on your team adhere to the coding standards. Changes can be made at any time - old configurations are automatically overwritten, since there is only one source of truth.
+With this configuration, you can ensure that all developers on your team adhere to the coding standards for javascript files. Changes can be made at any time - old configurations are automatically overwritten, since there is only one source of truth.
 
 <br>
 
