@@ -95,15 +95,24 @@ You can edit the files that define the coding standards as needed. You can also 
 
 <br>
 
+## Related projects
+
+@4th/git-hooks | @4th/stylelint-config
+:-------------------------|:-------------------------
+[![@4th/git-hooks][git-hooks-image]][git-hooks] | [![@4th/stylelint-config][stylelint-image]][stylelint-config]
+
+<br>
+
 ## License
 
 Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 
-<br>
-
-[git-hooks]: https://github.com/4th-motion/git-hooks
 [version-image]: https://img.shields.io/github/package-json/v/4th-motion/eslint-config
 [license-image]: https://img.shields.io/github/license/4th-motion/eslint-config
+[git-hooks-image]: https://avatars1.githubusercontent.com/u/8463894?s=200&v=4
+[stylelint-image]: https://avatars3.githubusercontent.com/u/10076935?s=200&v=4
+[git-hooks]: https://github.com/4th-motion/git-hooks
+[stylelint-config]: https://github.com/4th-motion/stylelint-config
 [.editorconfig]: .editorconfig
 [.prettierrc.js]: .prettierrc.js
 [license]: LICENSE.md
