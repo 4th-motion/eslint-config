@@ -103,21 +103,14 @@ Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 
 ## Related projects
 
-@4th/git-hooks | @4th/stylelint-config
-:-------------------------|:-------------------------
-[![@4th/git-hooks][git-hooks-image]][git-hooks] | [![@4th/stylelint-config][stylelint-image]][stylelint-config]
-
-
-
-
-<table border='none'>
-  <tr border='none'>
-    <td border='none'>@4th/git-hooks</td>
-    <td border='none'>@4th/stylelint-config</td>
+<table style="border:none">
+  <tr style="border:none">
+    <td style="border:none"><b>@4th/git-hooks</b></td>
+    <td style="border:none"><b>@4th/stylelint-config</b></td>
   </tr>
-  <tr> border='none'
-    <td valign="top" border='none'><img src="https://avatars1.githubusercontent.com/u/8463894?s=200&v=4"></td>
-    <td valign="top" border='none'><img src="https://avatars3.githubusercontent.com/u/10076935?s=200&v=4"></td>
+  <tr style="border:none">
+    <td valign="top" style="border:none"><img src="https://avatars1.githubusercontent.com/u/8463894?s=200&v=4"></td>
+    <td valign="top" style="border:none"><img src="https://avatars3.githubusercontent.com/u/10076935?s=200&v=4"></td>
   </tr>
 </table>
 
