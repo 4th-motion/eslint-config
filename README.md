@@ -101,9 +101,39 @@ Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 
 <br>
 
-[git-hooks]: https://github.com/4th-motion/git-hooks
+## Related projects
+
+@4th/git-hooks | @4th/stylelint-config
+:-------------------------|:-------------------------
+[![@4th/git-hooks][git-hooks-image]][git-hooks] | [![@4th/stylelint-config][stylelint-image]][stylelint-config]
+
+
+
+
+<table border='0'>
+  <tr>
+    <td>@4th/git-hooks</td>
+    <td>@4th/stylelint-config</td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="https://avatars1.githubusercontent.com/u/8463894?s=200&v=4"></td>
+    <td valign="top"><img src="https://avatars3.githubusercontent.com/u/10076935?s=200&v=4"></td>
+  </tr>
+</table>
+
+<p float="left">
+  <img src="https://avatars1.githubusercontent.com/u/8463894?s=200&v=4" width="100" />
+  <img src="https://avatars3.githubusercontent.com/u/10076935?s=200&v=4" width="100" />
+</p>
+
+<br>
+
 [version-image]: https://img.shields.io/github/package-json/v/4th-motion/eslint-config
 [license-image]: https://img.shields.io/github/license/4th-motion/eslint-config
+[git-hooks-image]: https://avatars1.githubusercontent.com/u/8463894?s=200&v=4
+[stylelint-image]: https://avatars3.githubusercontent.com/u/10076935?s=200&v=4
+[git-hooks]: https://github.com/4th-motion/git-hooks
+[stylelint-config]: https://github.com/4th-motion/stylelint-config
 [.editorconfig]: .editorconfig
 [.prettierrc.js]: .prettierrc.js
 [license]: LICENSE.md
