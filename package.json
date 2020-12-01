@@ -1,0 +1,42 @@
+{
+  "name": "@4th/eslint-config",
+  "description": "4th motions's eslint config.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Marco Koenen <mako@4thmotion.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/4th-motion/eslint-config",
+    "type": "git"
+  },
+  "bin": {
+    "4th-eslint": "./bin/eslint.sh",
+    "4th-eslint-init": "./init.js"
+  },
+  "scripts": {
+    "fresh": "rm -rf node_modules; yarn install",
+    "lint": "eslint . --color --fix"
+  },
+  "dependencies": {
+    "arg": ">= 2",
+    "chalk": ">= 2.4",
+    "babel-eslint": ">= 8",
+    "eslint": ">= 5",
+    "eslint-config-airbnb": ">= 17",
+    "eslint-config-prettier": ">= 3",
+    "eslint-plugin-import": ">= 2",
+    "eslint-plugin-jsx-a11y": ">= 6",
+    "eslint-plugin-prettier": ">= 3",
+    "eslint-plugin-react": ">= 7",
+    "eslint-plugin-react-hooks": ">= 4",
+    "prettier": ">= 1.14"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./index.js"
+    ]
+  },
+  "engines": {
+    "node": ">= 6"
+  }
+}
