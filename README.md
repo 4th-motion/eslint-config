@@ -110,14 +110,14 @@ Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 
 
 
-<table border='0'>
-  <tr>
-    <td>@4th/git-hooks</td>
-    <td>@4th/stylelint-config</td>
+<table border='none'>
+  <tr border='none'>
+    <td border='none'>@4th/git-hooks</td>
+    <td border='none'>@4th/stylelint-config</td>
   </tr>
-  <tr>
-    <td valign="top"><img src="https://avatars1.githubusercontent.com/u/8463894?s=200&v=4"></td>
-    <td valign="top"><img src="https://avatars3.githubusercontent.com/u/10076935?s=200&v=4"></td>
+  <tr> border='none'
+    <td valign="top" border='none'><img src="https://avatars1.githubusercontent.com/u/8463894?s=200&v=4"></td>
+    <td valign="top" border='none'><img src="https://avatars3.githubusercontent.com/u/10076935?s=200&v=4"></td>
   </tr>
 </table>
 
