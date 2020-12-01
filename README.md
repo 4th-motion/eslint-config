@@ -95,12 +95,6 @@ You can edit the files that define the coding standards as needed. You can also 
 
 <br>
 
-## License
-
-Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
-
-<br>
-
 ## Related projects
 
 @4th/git-hooks | @4th/stylelint-config
@@ -108,6 +102,10 @@ Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 [![@4th/git-hooks][git-hooks-image]][git-hooks] | [![@4th/stylelint-config][stylelint-image]][stylelint-config]
 
 <br>
+
+## License
+
+Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 
 [version-image]: https://img.shields.io/github/package-json/v/4th-motion/eslint-config
 [license-image]: https://img.shields.io/github/license/4th-motion/eslint-config
