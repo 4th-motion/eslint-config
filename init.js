@@ -45,9 +45,16 @@ const handleOverwrite = (key, name) => {
   }
 }
 
-// add script `lint` to package.json
+function getKeyByValue(object, value) {
+  return Object.keys(object).find((key) => object[key] === value)
+}
+
+// get task name from bin field in package.json
+const TASK_NAME = getKeyByValue(pkg.bin, './bin/eslint.sh')
+
+// add script `lint:js` to package.json
 handleOverwrite(pkg.scripts['lint:js'], 'lint:js')
-pkg.scripts['lint:js'] = '4th-eslint . --color --fix'
+pkg.scripts['lint:js'] = `${TASK_NAME} . --color --fix`
 
 // add `eslintConfig`
 handleOverwrite(pkg.eslintConfig, 'eslintConfig')
@@ -61,11 +68,12 @@ if (pkg.devDependencies && pkg.devDependencies[GIT_HOOKS_NAME]) {
     chalk`{cyanBright.bold [INFO]   } found {underline ${GIT_HOOKS_NAME}} in ${PACKAGE_FILENAME}. Adding a lint step to the {bold pre-commit} hook.`
   )
 
-  // add script `lint:staged` to package.json
+  // add script `lint:js:staged` to package.json
   const LINT_STAGED_SCRIPTNAME = 'lint:js:staged'
+  const LINT_STAGED_SCRIPT = `git diff --diff-filter=ACMRT --cached --name-only '*.js' | xargs ${TASK_NAME}`
 
   handleOverwrite(pkg.scripts[LINT_STAGED_SCRIPTNAME], LINT_STAGED_SCRIPTNAME)
-  pkg.scripts[LINT_STAGED_SCRIPTNAME] = `git diff --diff-filter=ACMRT --cached --name-only '*.js' | xargs 4th-eslint`
+  pkg.scripts[LINT_STAGED_SCRIPTNAME] = LINT_STAGED_SCRIPT
 
   // add pre-commit task
   pkg.git = pkg.git || {}
@@ -87,30 +95,30 @@ if (pkg.devDependencies && pkg.devDependencies[GIT_HOOKS_NAME]) {
 }
 
 // write to package.json
-// fs.writeFileSync(packagePath, JSON.stringify(pkg, null, '  '), 'utf-8')
+fs.writeFileSync(packagePath, JSON.stringify(pkg, null, '  '), 'utf-8')
 
-// // copy base files from this repository
-// const filesTopCopy = ['.prettierrc.js', '.editorconfig']
+// copy base files from this repository
+const filesTopCopy = ['.prettierrc.js', '.editorconfig']
 
-// filesTopCopy.forEach((fileName, index) => {
-//   const src = path.join(__dirname, fileName)
-//   const dest = path.join(process.cwd(), fileName)
+filesTopCopy.forEach((fileName, index) => {
+  const src = path.join(__dirname, fileName)
+  const dest = path.join(process.cwd(), fileName)
 
-//   if (src === dest) return
+  if (src === dest) return
 
-//   fs.copyFile(src, dest, (error) => {
-//     if (error) {
-//       console.error(chalk`{bold.red [ERROR]  } Could not copy ${fileName}.`)
-//     } else {
-//       console.log(chalk`{bold.magenta [ADDED]  } {bold ${fileName}}`)
+  fs.copyFile(src, dest, (error) => {
+    if (error) {
+      console.error(chalk`{bold.red [ERROR]  } Could not copy ${fileName}.`)
+    } else {
+      console.log(chalk`{bold.magenta [ADDED]  } {bold ${fileName}}`)
 
-//       // success message
-//       if (index === filesTopCopy.length - 1) {
-//         setTimeout(() => {
-//           console.log(chalk`{bold.green [SUCCESS]} Linter configuration initialized!`)
-//           console.log(chalk`          You can now start using {underline yarn lint:js} to check your code.`)
-//         }, 150)
-//       }
-//     }
-//   })
-// })
+      // success message
+      if (index === filesTopCopy.length - 1) {
+        setTimeout(() => {
+          console.log(chalk`{bold.green [SUCCESS]} Linter configuration initialized!`)
+          console.log(chalk`          You can now start using {underline yarn lint:js} to check your code.`)
+        }, 150)
+      }
+    }
+  })
+})
