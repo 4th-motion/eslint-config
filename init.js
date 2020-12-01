@@ -61,7 +61,7 @@ pkg.scripts['lint:js'] = `${TASK_NAME} . --color --fix`
 
 // add `eslintConfig`
 handleOverwrite(pkg.eslintConfig, 'eslintConfig')
-pkg.eslintConfig = { extends: [pkg.name] }
+pkg.eslintConfig = { extends: [pkgLocal.name] }
 
 // add pre-commit script to package.json
 const GIT_HOOKS_NAME = '@4th/git-hooks'
