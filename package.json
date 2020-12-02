@@ -6,7 +6,7 @@
   "author": "Marco Koenen <mako@4thmotion.com>",
   "license": "MIT",
   "repository": {
-    "url": "git+https://github.com/4th-motion/eslint-config.git",
+    "url": "git://github.com/4th-motion/eslint-config.git",
     "type": "git"
   },
   "keywords": [
