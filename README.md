@@ -8,7 +8,7 @@ With this configuration, you can ensure that all developers on your team adhere 
 
 <br>
 
-![Terminal](screenshot.jpg)
+![Terminal][screenshot]
 
 <br>
 
@@ -36,7 +36,7 @@ Once the `@4th-motion/eslint-config` package is installed, you can initiate it w
 yarn 4th-eslint-init
 ```
 
-_Note that any optional stuff (e.g. `@4th-motion/git-hooks`) must be present before this script is executed. In case you need to run the configuration again, you can use the flag **--force** to run the configuration process again and overwrite all settings._
+_Note that any optional stuff (e.g. `git-hooks`) must be present before this script is executed. In case you need to run the configuration again, you can use the flag **--force** to run the configuration process again and overwrite all settings._
 
 <br>
 
@@ -107,6 +107,7 @@ You can edit the files that define the coding standards as needed. You can also 
 
 Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 
+[screenshot]: https://assets.4thmotion.com/github/eslint-config/screenshot.jpg
 [version-image]: https://img.shields.io/github/package-json/v/4th-motion/eslint-config
 [license-image]: https://img.shields.io/github/license/4th-motion/eslint-config
 [git-hooks-image]: https://avatars1.githubusercontent.com/u/8463894?s=200&v=4
