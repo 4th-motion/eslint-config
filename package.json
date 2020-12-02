@@ -1,12 +1,12 @@
 {
-  "name": "@4th/eslint-config",
+  "name": "@4thmotion/eslint-config",
   "description": "An easy to set up eslint configuration that can be shared between your projects.",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Marco Koenen <mako@4thmotion.com>",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/4th-motion/eslint-config",
+    "url": "git+https://github.com/4th-motion/eslint-config.git",
     "type": "git"
   },
   "keywords": [
@@ -17,8 +17,8 @@
     "4th"
   ],
   "bin": {
-    "4th-eslint": "./bin/eslint.sh",
-    "4th-eslint-init": "./init.js"
+    "4th-eslint": "bin/eslint.sh",
+    "4th-eslint-init": "init.js"
   },
   "scripts": {
     "fresh": "rm -rf node_modules; yarn install",
