@@ -57,7 +57,7 @@ const TASK_NAME = getKeyByValue(pkgLocal.bin, './bin/stylelint.sh') || '4th-esli
 
 // add script `lint:js` to package.json
 handleOverwrite(pkg.scripts['lint:js'], 'lint:js')
-pkg.scripts['lint:js'] = `${TASK_NAME} . --color --fix`
+pkg.scripts['lint:js'] = `${TASK_NAME} ./**/*.js --color --fix --quiet`
 
 // add `eslintConfig`
 handleOverwrite(pkg.eslintConfig, 'eslintConfig')
@@ -73,7 +73,7 @@ if (pkg.devDependencies && pkg.devDependencies[GIT_HOOKS_NAME]) {
 
   // add script `lint:js:staged` to package.json
   const LINT_STAGED_SCRIPTNAME = 'lint:js:staged'
-  const LINT_STAGED_SCRIPT = `git diff --diff-filter=ACMRT --cached --name-only '*.js' | xargs ${TASK_NAME}`
+  const LINT_STAGED_SCRIPT = `git diff --diff-filter=ACMRT --cached --name-only --quiet './**/*.js' | xargs ${TASK_NAME}`
 
   handleOverwrite(pkg.scripts[LINT_STAGED_SCRIPTNAME], LINT_STAGED_SCRIPTNAME)
   pkg.scripts[LINT_STAGED_SCRIPTNAME] = LINT_STAGED_SCRIPT
