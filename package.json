@@ -13,8 +13,7 @@
     "style guide",
     "lint",
     "eslint",
-    "es6",
-    "4th"
+    "es6"
   ],
   "bin": {
     "4th-eslint": "bin/eslint.sh",
