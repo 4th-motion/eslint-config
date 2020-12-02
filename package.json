@@ -1,11 +1,10 @@
 {
-  "name": "@4thmotion/eslint-config",
+  "name": "@4th/eslint-config",
   "description": "An easy to set up eslint configuration that can be shared between your projects.",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Marco Koenen <mako@4thmotion.com>",
   "license": "MIT",
-  "private": false,
   "repository": {
     "url": "git+https://github.com/4th-motion/eslint-config.git",
     "type": "git"
