@@ -1,4 +1,4 @@
-# @4th/eslint-config
+# @4th-motion/eslint-config
 > An easy to set up eslint configuration that can be shared between your projects.
 
 ![Version][version-image]
@@ -8,7 +8,7 @@ With this configuration, you can ensure that all developers on your team adhere 
 
 <br>
 
-![Terminal](docs/screenshot.jpg)
+![Terminal](screenshot.jpg)
 
 <br>
 
@@ -17,26 +17,26 @@ With this configuration, you can ensure that all developers on your team adhere 
 Add this package as a devDependency to your project:
 
 ```
-yarn add --dev @4th/eslint-config
+yarn add --dev @4th-motion/eslint-config
 ```
 
-Optionally you can add [@4th/git-hooks][git-hooks] if you want to auto-lint upon committing:
+Optionally you can add [@4th-motion/git-hooks][git-hooks] if you want to auto-lint upon committing:
 
 ```
-yarn add --dev @4th/git-hooks
+yarn add --dev @4th-motion/git-hooks
 ```
 
 <br>
 
 ## Usage
 
-Once the `@4th/eslint-config` package is installed, you can initiate it with:
+Once the `@4th-motion/eslint-config` package is installed, you can initiate it with:
 
 ```
 yarn 4th-eslint-init
 ```
 
-_Note that any optional stuff (e.g. `@4th/git-hooks`) must be present before this script is executed. In case you need to run the configuration again, you can use the flag **--force** to run the configuration process again and overwrite all settings._
+_Note that any optional stuff (e.g. `@4th-motion/git-hooks`) must be present before this script is executed. In case you need to run the configuration again, you can use the flag **--force** to run the configuration process again and overwrite all settings._
 
 <br>
 
@@ -51,13 +51,13 @@ The initialization process adds [.editorconfig][.editorconfig] and [.prettierrc.
   },
   "eslintConfig": {
     "extends": [
-      "@4th/eslint-config"
+      "@4th-motion/eslint-config"
     ]
   }
 }
 ```
 
-If you have [@4th/git-hooks][git-hooks] as a devDependency, the _package.json_ file will be extended even further:
+If you have [@4th-motion/git-hooks][git-hooks] as a devDependency, the _package.json_ file will be extended even further:
 
 ```json
 {
@@ -97,9 +97,9 @@ You can edit the files that define the coding standards as needed. You can also 
 
 ## Related projects
 
-@4th/git-hooks | @4th/stylelint-config
+@4th-motion/git-hooks | @4th-motion/stylelint-config
 :-------------------------|:-------------------------
-[![@4th/git-hooks][git-hooks-image]][git-hooks] | [![@4th/stylelint-config][stylelint-image]][stylelint-config]
+[![@4th-motion/git-hooks][git-hooks-image]][git-hooks] | [![@4th-motion/stylelint-config][stylelint-image]][stylelint-config]
 
 <br>
 
