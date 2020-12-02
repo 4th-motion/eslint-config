@@ -113,6 +113,6 @@ Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 [stylelint-image]: https://avatars3.githubusercontent.com/u/10076935?s=200&v=4
 [git-hooks]: https://github.com/4th-motion/git-hooks
 [stylelint-config]: https://github.com/4th-motion/stylelint-config
-[.editorconfig]: .editorconfig
-[.prettierrc.js]: .prettierrc.js
-[license]: LICENSE.md
+[.editorconfig]: /.editorconfig
+[.prettierrc.js]: /.prettierrc.js
+[license]: /LICENSE.md
