@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', 'prettier'],
+  extends: ['airbnb-base/legacy', 'eslint-config-prettier', 'eslint-config-preact', 'prettier'],
   parser: 'babel-eslint',
   plugins: ['prettier'],
   parserOptions: {
@@ -10,9 +10,17 @@ module.exports = {
     browser: true,
     es6: true
   },
+  ignorePatterns: [
+    '**/node_modules/',
+    '**/.next/',
+    '**/.out/',
+    '**/build/',
+    '**/dist/'
+  ],
   rules: {
     'prettier/prettier': 'error',
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
     'lines-around-comment': [
       'error',
       {
