@@ -19,6 +19,7 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
+    'no-param-reassign:': 0,
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
     'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
     'lines-around-comment': [
