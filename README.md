@@ -107,7 +107,7 @@ You can edit the files that define the coding standards as needed ([eslint confi
 
 Copyright © 2020 by 4th motion GmbH. Released under the [MIT License][license].
 
-[screenshot]: https://assets.4thmotion.com/github/eslint-config/screenshot.jpg
+[screenshot]: https://assets.4thmotion.com/github/eslint-config/screenshot.png
 [version-image]: https://img.shields.io/github/package-json/v/4th-motion/eslint-config
 [license-image]: https://img.shields.io/github/license/4th-motion/eslint-config
 [git-hooks-image]: https://avatars1.githubusercontent.com/u/8463894?s=200&v=4
