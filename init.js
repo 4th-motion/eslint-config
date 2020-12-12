@@ -53,7 +53,7 @@ function getKeyByValue(object, value) {
 }
 
 // get task name from bin field in package.json
-const TASK_NAME = getKeyByValue(pkgLocal.bin, './bin/stylelint.sh') || '4th-eslint'
+const TASK_NAME = getKeyByValue(pkgLocal.bin, './bin/eslint.sh') || '4th-eslint'
 
 // add script `lint:js` to package.json
 handleOverwrite(pkg.scripts['lint:js'], 'lint:js')
