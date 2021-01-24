@@ -57,7 +57,7 @@ const TASK_NAME = getKeyByValue(pkgLocal.bin, './bin/eslint.sh') || '4th-eslint'
 
 // add script `lint:js` to package.json
 handleOverwrite(pkg.scripts['lint:js'], 'lint:js')
-pkg.scripts['lint:js'] = `${TASK_NAME} ./**/*.js --color --fix --quiet`
+pkg.scripts['lint:js'] = `${TASK_NAME} './**/*.js' --color --fix --quiet`
 
 // add `eslintConfig`
 handleOverwrite(pkg.eslintConfig, 'eslintConfig')
