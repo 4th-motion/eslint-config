@@ -10,7 +10,7 @@ const args = arg({ '--force': Boolean })
 console.log(chalk`          Initiating eslint configuration.`)
 
 // get package.json content
-const getPackageContent = (packagePath) => {
+const getPackageContent = packagePath => {
   try {
     return fs.readFileSync(packagePath, 'utf-8')
   } catch (error) {
@@ -29,10 +29,10 @@ const pkg = JSON.parse(getPackageContent(packagePath))
 const pkgLocal = JSON.parse(getPackageContent(packageLocalPath))
 
 // logging messages
-const messageAdded = (name) => chalk`{bold.magenta [ADDED]  } {bold ${name}} in ${PACKAGE_FILENAME}.`
-const messageCantOverwrite = (name) =>
+const messageAdded = name => chalk`{bold.magenta [ADDED]  } {bold ${name}} in ${PACKAGE_FILENAME}.`
+const messageCantOverwrite = name =>
   chalk`{bold.red [ERROR]  } can't overwrite {bold ${name}} in ${PACKAGE_FILENAME}. Use {underline --force} to overwrite the existing value.`
-const messageWasOverwritten = (name) =>
+const messageWasOverwritten = name =>
   chalk`{bold.yellow [WARNING]} {bold ${name}} in ${PACKAGE_FILENAME} was overwritten.`
 
 const handleOverwrite = (key, name) => {
@@ -49,7 +49,7 @@ const handleOverwrite = (key, name) => {
 }
 
 function getKeyByValue(object, value) {
-  return object ? Object.keys(object).find((key) => object[key] === value) : null
+  return object ? Object.keys(object).find(key => object[key] === value) : null
 }
 
 // get task name from bin field in package.json
@@ -89,7 +89,7 @@ if (pkg.devDependencies && pkg.devDependencies[GIT_HOOKS_NAME]) {
     }
 
     // add task only if it does not yet exist
-    if (!pkg.git['pre-commit'].filter((task) => task === LINT_STAGED_SCRIPTNAME).length) {
+    if (!pkg.git['pre-commit'].filter(task => task === LINT_STAGED_SCRIPTNAME).length) {
       pkg.git['pre-commit'].unshift(LINT_STAGED_SCRIPTNAME)
     }
   }
@@ -109,7 +109,7 @@ filesTopCopy.forEach((fileName, index) => {
 
   if (src === dest) return
 
-  fs.copyFile(src, dest, (error) => {
+  fs.copyFile(src, dest, error => {
     if (error) {
       console.error(chalk`{bold.red [ERROR]  } Could not copy ${fileName}.`)
     } else {

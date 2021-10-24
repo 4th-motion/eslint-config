@@ -24,8 +24,9 @@
     "lint": "eslint . --color --fix"
   },
   "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
     "arg": ">= 2",
-    "babel-eslint": ">= 8",
     "chalk": ">= 2.4",
     "eslint": ">= 5",
     "eslint-config-airbnb": ">= 17",
