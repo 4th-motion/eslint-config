@@ -1,7 +1,7 @@
 {
   "name": "@4th-motion/eslint-config",
   "description": "An easy to set up eslint configuration that can be shared between your projects.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "index.js",
   "author": "Marco Koenen <mako@4thmotion.com>",
   "license": "MIT",
