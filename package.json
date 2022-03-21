@@ -1,7 +1,7 @@
 {
   "name": "@4th-motion/eslint-config",
   "description": "An easy to set up eslint configuration that can be shared between your projects.",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "index.js",
   "author": "Marco Koenen <mako@4thmotion.com>",
   "license": "MIT",
@@ -26,18 +26,18 @@
   "dependencies": {
     "@babel/core": "^7.15.8",
     "@babel/eslint-parser": "^7.15.8",
-    "arg": ">= 2",
-    "chalk": ">= 2.4",
-    "eslint": ">= 5",
-    "eslint-config-airbnb": ">= 17",
+    "arg": "^2",
+    "chalk": "^4.1.2",
+    "eslint": "^8.11.0",
     "eslint-config-preact": "^1.1.3",
-    "eslint-config-prettier": ">= 3",
-    "eslint-plugin-import": ">= 2",
-    "eslint-plugin-jsx-a11y": ">= 6",
-    "eslint-plugin-prettier": ">= 3",
-    "eslint-plugin-react": ">= 7",
-    "eslint-plugin-react-hooks": ">= 4",
-    "prettier": ">= 1.14"
+    "eslint-config-prettier": "^3",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-prettier": "^3",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^4",
+    "prettier": "^1.14",
+    "typescript": "^4.6.2"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +45,6 @@
     ]
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">=6"
   }
 }
