@@ -21,6 +21,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Updated `4th-eslint-init` to generate `eslint.config.js` instead of the legacy
   `eslintConfig` package.json entry.
 
+## [2.0.2] - 2026-09-10
+
+### Changed
+
+- Moved the shared generic ignore rules into the flat configuration so consumers
+  no longer need a legacy `.eslintignore` file under ESLint 9.
+
 ## [1.2.0] - 2026-09-10
 
 ### Fixed

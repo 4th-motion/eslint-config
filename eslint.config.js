@@ -16,7 +16,20 @@ module.exports = [
         requireConfigFile: false
       }
     },
-    ignores: ['**/node_modules/', '**/.next/', '**/.out/', '**/build/', '**/dist/'],
+    ignores: [
+      '**/node_modules/**',
+      '**/vendor/**',
+      '**/wp-content/**',
+      '**/.next/**',
+      '**/.out/**',
+      '**/build/**',
+      '**/dist/**',
+      '**/_templates/**',
+      '**/tests/**',
+      '**/coverage/**',
+      '**/test-results/**',
+      '**/storybook-static/**'
+    ],
     rules: {
       'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
       'lines-around-comment': [
