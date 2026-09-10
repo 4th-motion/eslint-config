@@ -1,7 +1,6 @@
 module.exports = {
-  extends: ['airbnb-base/legacy', 'eslint-config-prettier', 'prettier'],
+  extends: ['airbnb-base/legacy', 'plugin:prettier/recommended'],
   parser: '@babel/eslint-parser',
-  plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
@@ -13,8 +12,6 @@ module.exports = {
   },
   ignorePatterns: ['**/node_modules/', '**/.next/', '**/.out/', '**/build/', '**/dist/'],
   rules: {
-    'prettier/prettier': 'error',
-    'no-param-reassign:': 0,
     'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
     'lines-around-comment': [
       'error',
