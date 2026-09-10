@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.0] - 2026-09-10
+
+### Changed
+
+- Migrated the shared configuration to ESLint flat config via `eslint.config.js`.
+- Raised ESLint to 9, Prettier to 3 and `eslint-plugin-prettier` to 5.
+- Updated the `4th-eslint` wrapper to load the shared flat config explicitly.
+- Updated `4th-eslint-init` to generate `eslint.config.js` instead of the legacy
+  `eslintConfig` package.json entry.
+
 ## [1.2.0] - 2026-09-10
 
 ### Fixed

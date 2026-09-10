@@ -42,20 +42,17 @@ _Note that any optional stuff (e.g. `git-hooks`) must be present before this scr
 
 ## Behind the scenes
 
-The initialization process adds [.editorconfig][.editorconfig] and [.prettierrc.js][.prettierrc.js] from this repository to your project. Also the _package.json_ file is extended as follows:
+The initialization process adds [.editorconfig][.editorconfig], [.prettierrc.js][.prettierrc.js] and `eslint.config.js` from this repository to your project. It also adds the lint script to _package.json_:
 
 ```json
 {
   "scripts": {
     "lint:js": "4th-eslint . --color --fix"
-  },
-  "eslintConfig": {
-    "extends": [
-      "@4th-motion/eslint-config"
-    ]
   }
 }
 ```
+
+The generated `eslint.config.js` loads the shared flat configuration. The package's `4th-eslint` wrapper passes this configuration explicitly, so existing projects can migrate without relying on the removed `eslintConfig` package.json key.
 
 If you have [@4th-motion/git-hooks][git-hooks] as a devDependency, the _package.json_ file will be extended even further:
 

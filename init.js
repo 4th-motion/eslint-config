@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable no-console, consistent-return, no-restricted-syntax */
 const fs = require('fs')
 const arg = require('arg')
 const chalk = require('chalk')
@@ -53,15 +52,23 @@ function getKeyByValue(object, value) {
 }
 
 // get task name from bin field in package.json
-const TASK_NAME = getKeyByValue(pkgLocal.bin, './bin/eslint.sh') || '4th-eslint'
+const TASK_NAME = getKeyByValue(pkgLocal.bin, './bin/eslint.js') || '4th-eslint'
 
 // add script `lint:js` to package.json
 handleOverwrite(pkg.scripts['lint:js'], 'lint:js')
 pkg.scripts['lint:js'] = `${TASK_NAME} './**/*.js' --color --fix --quiet`
 
-// add `eslintConfig`
-handleOverwrite(pkg.eslintConfig, 'eslintConfig')
-pkg.eslintConfig = { extends: [pkgLocal.name] }
+// add flat config
+const eslintConfigFile = path.join(process.cwd(), 'eslint.config.js')
+const eslintConfigExists = fs.existsSync(eslintConfigFile)
+
+if (eslintConfigExists && !args['--force']) {
+  console.error(messageCantOverwrite('eslint.config.js'))
+  process.exit(2)
+}
+
+fs.writeFileSync(eslintConfigFile, `module.exports = require('${pkgLocal.name}')\n`, 'utf-8')
+console.log(eslintConfigExists ? messageWasOverwritten('eslint.config.js') : messageAdded('eslint.config.js'))
 
 // add pre-commit script to package.json
 const GIT_HOOKS_NAME = '@4th-motion/git-hooks'
