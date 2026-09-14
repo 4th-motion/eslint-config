@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.1.0] - 2026-09-14
+
+### Added
+
+- A path scoped configuration block for WordPress backend scripts, matching
+  `**/scripts/backend/**/*.js`. It declares the WordPress globals
+  (`acf`, `ajaxurl`, `jQuery`, `tinymce`, `wp`) so consuming projects no longer
+  repeat them in per file `/* global */` comments.
+
+### Changed
+
+- Within that block, rules that clash with the WordPress backend environment are
+  relaxed: `func-names`, `no-alert`, `no-await-in-loop`, `no-console` and
+  `no-underscore-dangle` are off, `no-param-reassign` no longer flags property
+  writes, `no-use-before-define` allows hoisted function declarations, and
+  `no-restricted-syntax` permits `for..of` while still banning `for..in`,
+  labels and `with`. Frontend code keeps the unchanged, stricter defaults.
+
 ## [2.0.1] - 2026-09-10
 
 ### Fixed
